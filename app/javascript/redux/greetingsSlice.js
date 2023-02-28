@@ -4,7 +4,6 @@ export const getRandomMessage = createAsyncThunk(
   'greetings/getRandomMessages',
   async () => {
     const response = await fetch('http://127.0.0.1:3000/api/greetings/random/message');
-    console.log(`response= ${response}`)
     return response.json()
   },
 );
@@ -20,8 +19,7 @@ const greetingsSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder.addCase(getRandomMessage.fulfilled, (state, action) => {
-      state.message = action.payload.message;
-      console.log(state.message);
+      state.message = action.payload.random_message;
       state.status = 'done';
     });
     builder.addCase(getRandomMessage.pending, (state, action) => {

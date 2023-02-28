@@ -6,10 +6,9 @@ function Greeting() {
   const dispatch = useDispatch();
   const status = useSelector((state) => state.greeting.status);
   const message = useSelector((state) => state.greeting.message);
-  console.log(`state=${state}`)
 
   useEffect(() => {
-    if (status == "done") {
+    if (!status !== "done") {
       dispatch(getRandomMessage());
     }
   }, []);
