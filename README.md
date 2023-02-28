@@ -85,7 +85,7 @@ In order to run this project you need have installed:
 
 ### Setup
 
-Clone this repository to your desired folder:
+Clone this repository to your desired folder (e.g., my-folder):
 
 
   cd my-folder
@@ -100,9 +100,9 @@ Install this project with:
 
 ### Usage
 
-To run the project, execute the following command:
+To start this project, run the following command:
 
-.bin/dev
+`.bin/dev` inside the root directory of this repository.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
