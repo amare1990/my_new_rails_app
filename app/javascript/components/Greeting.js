@@ -8,7 +8,7 @@ function Greeting() {
   const message = useSelector((state) => state.greeting.message);
 
   useEffect(() => {
-    if (!status !== "done") {
+    if (status !== "idle" || status !== "loading") {
       dispatch(getRandomMessage());
     }
   }, []);
